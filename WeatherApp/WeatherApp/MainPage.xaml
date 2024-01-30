@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage">
+
+    <StackLayout BackgroundColor="Aqua">
+        <StackLayout Background="Blue">
+            <Label HorizontalTextAlignment="Center" Text="Weather app" FontSize="24" TextColor="#c3fd23" Margin="0, 50" FontAttributes="Bold"/>
+            <Image Source="https://cdn-icons-png.flaticon.com/512/4440/4440865.png" Margin="0, 0, 0, 60"/>
+        </StackLayout>
+        <RelativeLayout HorizontalOptions="Center">
+            <Frame RelativeLayout.YConstraint="-70" HorizontalOptions="Center" BackgroundColor="#fcfcfc"  Padding="50" CornerRadius="20">
+                <StackLayout>
+                    <Entry x:Name="wCity" Placeholder="Enter city..." WidthRequest="200"/>
+                    <Button x:Name="wBtn" Text="Get info" BackgroundColor="#b0b0b0" TextColor="#000" FontAttributes="Bold" Clicked="Button_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </RelativeLayout>
+        <Label x:Name="wResult" Text="" HorizontalTextAlignment="Center" TextColor="Black" Margin="0, 0, 0, 100"/>
+    </StackLayout>
+
+</ContentPage>
